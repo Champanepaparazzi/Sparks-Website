@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparks | Hackathon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="file:///C:/Users/ABC/Desktop/SPARKS-WEBSITE/Sparks%20Logo.jpg" alt="Sparks Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" class="hit">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#domains">Domains</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#sponsor-section">Become our sponsor</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="left-content">
+                <h1>Startup Spark</h1>
+                <h3> 2024-2025 | Grand Challenge</h3>
+            </div>
+            <div class="center-content">
+                <a href="registration.html" class="btn-red">Register Here</a>
+                <a href="community.html" class="btn-black">Join Our Community</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <center>
+            <h2>About Us</h2>
+            <h3>Welcome, Innovators and Change-makers</h3>
+        </center>
+
+        <div id="about">
+            <pre> Welcome to Startup Spark Grand Hackathon – where entrepreneurial spirit and cutting-edge <br> innovation collide! Organized by Rajalakshmi Engineering College, Chennai, this dynamic event <br> is the perfect platform to bring your breakthrough ideas to life. Collaborate with forward-thinking <br> peers, confront real-world business challenges, and unlock new possibilities in tech and <br> entrepreneurship. Get ready to ignite your potential and create lasting impact! </pre>
+        </div>
+
+    </section>
+
+    <section id="domains">
+        <h2>Domains</h2>
+        <h4>Open Domain: Explore the Uncharted</h4>
+
+        <div id="domains">
+            <pre>In the Open Domain, we welcome participants to solve current problems or come up with solutions<br> for issues that could arise in the future that paves a way to relate<br>with Startup or Entrepreneurship <br> 
+            The goal is to think creatively and propose ideas that can make a positive difference.<br> Whether it's a problem we face now or one we might face later, we want you to use your skills <br>and imagination to create  meaningful solutions. No idea is too big or too small!</pre>
+        </div>
+    </section>
+
+    <section id="timeline">
+        <h2>Timeline</h2>
+
+        <div class="timeline-container">
+            <!-- Phase 1 -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Phase 1: Idea Submission and Shortlisting</h3>
+                    <p>(October to October End)</p>
+                </div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Phase 2: Prototype Development</h3>
+                    <p>(November to February)</p>
+                </div>
+            </div>
+
+            <!-- Final Phase -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Final Phase: Jury and Investor Pitch</h3>
+                    <p>(March)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sponsor-section">
+        <div class="sponsor-container">
+            <h2> <u> WANT TO PARTNER WITH US? </u></h2><br>
+            <p>
+                Be a part of the movement and make a lasting impact by partnering with <strong>Startup Spark</strong>,
+                an exciting hackathon event that brings together talented innovators to create tomorrow’s solutions.
+            </p>
+            <p>
+                As a partner, you'll gain valuable visibility among a highly engaged audience, connect with emerging
+                talent,
+                and position your brand as a leader in innovation. Join us in empowering the next generation of
+                entrepreneurs
+                and driving technological progress.
+            </p>
+            <a href="brochure.pdf" class="btn" target="_blank">View Brochure</a>
+        </div>
+    </section>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FAQ Section</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+
+        <section id="faqs">
+            <div class="faq-container">
+                <h2>FREQUENTLY ASKED QUESTIONS</h2>
+                <div class="faq-item">
+                    <div class="faq-question">Is this Hackathon an online event or offline?<span class="plus">+</span>
+                    </div>
+                    <div class="faq-answer">The hackathon is an offline event.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Is there any registration fee?<span class="plus">+</span></div>
+                    <div class="faq-answer">Yes, there is a nominal registration fee.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Should you stay on campus overnight?<span class="plus">+</span></div>
+                    <div class="faq-answer">It is encouraged but not mandatory.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What are the facilities arranged by the organizers?<span
+                            class="plus">+</span></div>
+                    <div class="faq-answer">We provide Wi-Fi, meals, and a comfortable working environment.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">I am a newbie, can I hack?<span class="plus">+</span></div>
+                    <div class="faq-answer">Absolutely! The event is open to everyone.</div>
+                </div>
+                <!-- Add more FAQ items as needed -->
+            </div>
+            <br>
+            <br>
+        </section>
+        <script>
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    item.classList.toggle('active');
+                });
+            });
+        </script>
+    </body>
+
+    </html>
+</body>
+
+</html>

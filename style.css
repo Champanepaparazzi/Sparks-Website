@@ -1,0 +1,409 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Set body background color to black */
+    color: #fff;
+}
+
+header {
+    background-color: #000; /* Set header background color to black */
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 101px; /* Adjust size as needed */
+    height: auto;
+    margin-left: 20px; /* Adjust margin as needed */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+nav a {
+    color: inherit; /* Keeps the original color */
+    position: relative; /* For positioning the pseudo-element */
+    text-decoration: none; /* Removes default underline */
+}
+
+nav a::after {
+    content: ""; /* Creates an empty element */
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjusts the underline's position */
+    width: 0; /* Initially, the line is invisible */
+    height: 2px; /* Set the thickness of the underline */
+    background-color: #ff0000; /* Red color for the underline */
+    transition: width 0.3s ease; /* Animation for the underline */
+}
+
+nav a:hover::after {
+    width: 100%; /* Expands the underline to full width on hover */
+}
+
+/* Align the left content */
+.left-content h1{
+    text-align: left;
+    margin-top: 10%;
+    margin-left: 40px; /* Adjust this value for the desired gap */
+    width: 60%; /* Occupies half the width of the container */
+}
+
+.left-content h3{
+    text-align: left;
+    margin-left: 50px; /* Adjust this value for the desired gap */
+    width: 50%; /* Occupies half the width of the container */
+}
+
+
+/* Center the buttons */
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.center-content a {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 300px; /* Fixed width for buttons */
+    text-align: center;
+}
+
+.btn-red {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.btn-black {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+#about {
+    background-color: #000; /* Darker background for About section */
+    padding: 120px 30px; /* More padding for this specific section */
+}
+
+#about h2 {
+    font-family: 'Orbitron', sans-serif; /* General heading font for About section */
+    font-size: 2.5rem; /* Large font size for headings */
+    text-align: center; /* Center-aligned heading for About section */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+#about h3{
+    font-family: 'Audiowide', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+#about pre {
+    font-family: "Courier New", Courier, monospace; /* Sets a monospace font */
+    font-size: 1.2rem; /* Adjusts font size */
+    text-align: center;
+    line-height: 1.6; /* Increases line spacing for better readability */
+}
+
+
+#domains {
+    background-color: #000; /* Different background color for Domains */
+    padding: 120px 30px;
+}
+
+#domains h2{
+    font-family: 'Orbitron', sans-serif; /* General heading font for About section */
+    font-size: 2.5rem; /* Large font size for headings */
+    text-align: center; /* Center-aligned heading for About section */
+    margin-bottom: 15px; /* Space below heading */
+}
+
+#domains h4{
+    font-family: "Courier New", Courier, monospace; /* Sets a monospace font */
+    font-size: 1.2rem; /* Adjusts font size */
+    text-align: center;
+    line-height: 1.6; /* Increases line spacing for better readability */
+}
+
+#domains pre {
+    font-family: "Courier New", Courier, monospace; /* Sets a monospace font */
+    font-size: 1.2rem; /* Adjusts font size */
+    text-align: center;
+    line-height: 1.6; /* Increases line spacing for better readability */
+}
+
+section#timeline {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #000;
+}
+
+section#timeline h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+/* Timeline Container */
+.timeline-container {
+    position: relative;
+    margin: 0 auto;
+    color: #fff;
+    padding: 20px 0;
+    max-width: 800px;
+}
+
+/* Timeline Item Styling */
+.timeline-item {
+    position: relative;
+    margin: 20px 0;
+    padding-left: 60px;
+}
+
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    left: 25px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #fff;
+}
+
+/* Circle Indicator for each phase */
+.timeline-item:after {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ff0000; /* Red dot for the timeline marker */
+    border: 2px solid #fff;
+}
+
+/* Timeline content box */
+.timeline-content {
+    background-color: #222;
+    padding: 15px 20px;
+    border-radius: 6px;
+    position: relative;
+}
+
+.timeline-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.timeline-content p {
+    font-size: 1.2rem;
+}
+
+/* Ensure the entire page is black */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #000;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+/* Center the section vertically and horizontally */
+#sponsor-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+}
+
+.sponsor-container {
+    text-align: center;
+    background-color: #2a2a2a; /* The box stays a dark gray color */
+    padding: 40px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Style the h2 element (WANT TO PARTNER WITH US?) */
+h2 {
+    font-size: 2em;
+    color: #fff; /* White text */
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Style the button */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1em;
+    background-color: #FF0000; /* Yellow background */
+    color: #000; /* Black text */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.left-content {
+    text-align: left;
+    margin-left: 0px; /* Creates a left margin */
+}
+
+.left-content h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.left-content h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5rem;
+    margin-top: 5px;
+    color: #fff;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.center-content a {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 300px; /* Fixed width for buttons */
+    text-align: center;
+}
+
+.btn-red {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.btn-black {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+/* General body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+#faq {
+    padding: 50px;
+    text-align: center;
+    background-color: #111;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq-container h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.faq-item {
+    background-color: #444;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-item:hover {
+    background-color: #444;
+}
+
+.faq-question {
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.faq-question .plus {
+    font-size: 1.5rem;
+    color: #ff0000;
+}
+
+.faq-answer {
+    font-size: 1rem;
+    display: none; /* Hidden by default */
+    margin-top: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Show the answer when the item is active */
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* Toggle between plus and minus symbol */
+.faq-item.active .faq-question .plus {
+    content: "-";
+    transform: rotate(45deg); /* Rotates to show minus */
+}
